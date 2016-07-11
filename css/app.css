@@ -1,32 +1,147 @@
-.body{
-    background-color: #524B58
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-.goal{
-    background-color: #524B58; 
+
+/*HTML 5 reset for older browsers
+*/
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/*
+  ========================================
+  wrapper
+  ========================================
+*/
+
+.page-wrap {
+    text-align: left;
+    width: 700px;
+    margin:  0 auto;
+    background: #565A69;
+
+}
+
+body {
     text-align: center;
-    font: #ff5733;
+    background: #000;
+    font-family: "lato"
 }
 
+/*
+  ========================================
+  Header
+  ========================================
+*/
 
-.goal h1{
+.jordan {
+    text-align: center;
+    padding: 30px;
+}
+
+.jordan h1 {
     color: #ffa500;
-}	
-.span_1_of_3 {
-	width: 32.26%; 
+    font-size: 50px
+}
+
+.span_1_of_3,
+.span_1_of_3 h1,
+.span_1_of_3 h3{
+    color: #fff;
+}
+.first{
+    text-align: right;
+    padding-top: 60px
+}
+
+.second {
     text-align: center;
 }
-.footer_1_of_3{
-    width: 32%;
+
+.third{
+    padding-top: 60px
+}
+
+.span_1_of_3 h3 {
+    font-size: 28px;
+}
+
+.span_1_of_3 h4 {
+    font-size: 32px;
+}
+
+
+.second h1 {
+    font-size: 30px;
+}
+
+.mid-section h1{
+    font-size: 40px;
+    padding: 10px;
+}
+
+.mid-section h2{
+    font-size: 30px;
+    font-weight: 200px;
+    padding-bottom: 30px;
+}
+
+
+
+/*
+  ========================================
+  grid
+  ========================================
+*/
+
+.span_1_of_3{
+	width: 32.26%;
     text-align: center;
-
-    margin: auto;
 }
 
-.mkia{
-    background: #524b58;
-}
+/*
+  ========================================
+  GO FULL WIDTH AT LESS THAN 480 PIXELS
+  ========================================
+*/
 
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
 
 @media only screen and (max-width: 480px) {
 	.span_3_of_3 {
@@ -40,17 +155,83 @@
 	}
 }
 
-/*  SECTIONS  */
+@media only screen and (max-width: 480px) {
+	.footer_3_of_3 {
+		width: 100%; 
+	}
+	.footer_2_of_3 {
+		width: 100%; 
+	}
+	.footer_1_of_3 {
+		width: 100%;
+	}
+}
+/*
+  ========================================
+  Footer
+  ========================================
+*/
 
+.footer_1_of_3{
+    position: relative; 
+    background: #524B58;
+    color: #fff;
+    width: 33.33%;
+    text-align: center;
+    padding-top: 10px;
+    padding: 20px;
+}
+
+
+/*
+  ========================================
+  Sections
+  ========================================
+*/
 .section {
+    position: relative; 
 	clear: both;
 	padding: 0px;
 	margin: 0px;
-    background-image: url("../images/bg.jpg")
 }
 
-/*  GROUPING */
+.main-section {
+     /* For IE8 and earlier */
+    height: 640px;
+}
 
+.main-section {  position: relative; }
+
+.main-section:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-image: url('../images/bg.jpg');
+    background-repeat: no-repeat; 
+    background-size: 100%;
+    opacity: 0.5;
+}
+
+.mid-section {
+    position: relative; 
+    z-index: 2;
+}
+
+.mid-section {
+    color: #fff;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/*
+  ========================================
+  Grouping
+  ========================================
+*/
 
 .group:before,
 .group:after {
@@ -62,17 +243,50 @@
 }
 .group {
     zoom:1; /* For IE 6/7 (trigger hasLayout) */
+    padding-top: 120px;
 }
 
-/*  GRID COLUMN SETUP   */
+/*
+  ========================================
+  Grid Colomn Setup
+  ========================================
+*/
 
 .col {
 	display: block;
-	float:left;
+	float: left;
 	margin: 1% 0 1% 1.6%;
 }
 
+.coll {
+	display: block;
+	float: left;
+	margin: 1% 0 1% 0;
+    opacity: 0.7;
+}
+
+.one{
+    border-right: 2px solid #ddd;
+}
+
+.two {
+    border-right: 2px solid #ddd;
+}
+
+.coll p{
+    font-size: 30px;
+}
+
+.coll h4{
+    color: #ddd;
+    font-size: 20px;
+    padding-left: 50px;
+    margin: 0 auto;
+}
+
 .col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+
+.one { margin-left: 0%; } /* all browsers except IE6 and lower */
 
 
 /*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
@@ -83,6 +297,55 @@
 	}
 }
 
-.plain {
-    padding: 100px;
+/*
+  ========================================
+  Button
+  ========================================
+*/
+
+
+.btn {
+    background: #343434;
+    border-radius: 35px;
+    color: #ffa500;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+    letter-spacing: .5px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.btn-alt {
+    text-align: center;
+    border: 1px solid ;
+    padding: 15px 30px;
+}
+
+.mid-section p{
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: inherit;
+}
+
+/*
+  ========================================
+  Hover Effect
+  ========================================
+*/
+
+
+.second img {
+  filter: url(filters.svg#grayscale);
+  /* Firefox 3.5+ */
+  filter: gray;
+  /* Internt Explorer 6-9 */
+  -webkit-filter: grayscale(1);
+  /* Google Chrome & Safari 6+ */
+}
+
+.second img:hover {
+  filter: none;
+  -webkit-filter: none;
 }
